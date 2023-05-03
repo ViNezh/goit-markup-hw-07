@@ -593,12 +593,27 @@ img {
 
 .customers-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 16px;
+    justify-content: center;
 }
 
 .customers-item {
-    width: calc((100% - 120px) / 6);
+    width: calc((100% - 16px) / 2);
     height: 88px;
+}
+
+@media only screen and (min-width: 768px) {
+    .customers-item {
+        width: calc((100% - 48px) / 3);
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .customers-item {
+        width: calc((100% - 120px) / 6);
+    }
 }
 
 .customers-link {
