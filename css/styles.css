@@ -510,7 +510,7 @@ img {
 }
 
 .team-item .card-bgc {
-    width: calc(100% - 134px);
+    width: 264px;
 }
 
 @media only screen and (min-width: 768px) {
