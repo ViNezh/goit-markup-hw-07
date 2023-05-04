@@ -869,7 +869,7 @@ img {
 
 .subscribe-input {
     display: block;
-    min-width: calc(100% - 30px);
+    width: 392px;
     height: 40px;
     padding: 8px 16px;
 
