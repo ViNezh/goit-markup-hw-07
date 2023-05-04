@@ -58,8 +58,8 @@ img {
 .container {
     min-width: 320px;
     max-width: 428px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin-left: auto;
     margin-right: auto;
 
@@ -492,6 +492,14 @@ img {
     background-color: var(--secondary-bg-color);
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+    .team>.container {
+        padding-right: 108px;
+        padding-left: 108px;
+    }
+}
+
+
 .team-item {
     display: flex;
     flex-direction: column;
@@ -515,7 +523,7 @@ img {
 
 @media only screen and (min-width: 768px) {
     .team-item .card-bgc {
-        width: calc((100% - 210px) / 2)
+        width: calc((100% - 24px) / 2)
     }
 }
 
@@ -578,6 +586,13 @@ img {
 }
 
 /* ---------------------------CUSTOMERS---------------- */
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+    .customers>.container {
+        padding-right: 108px;
+        padding-left: 108px;
+    }
+}
+
 
 .title-customers {
     margin-bottom: 72px;
@@ -597,6 +612,21 @@ img {
     row-gap: 72px;
     column-gap: 16px;
     justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .customers-list {
+        column-gap: 24px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .customers-list {
+        flex-wrap: nowrap;
+        row-gap: 0;
+        gap: 24px;
+
+    }
 }
 
 .customers-item {
@@ -668,9 +698,27 @@ img {
     align-items: baseline;
 }
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 768px) {
     .footer>.container {
         flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 24px;
+
+
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+    .footer>.container {
+        padding-right: 108px;
+        padding-left: 108px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .footer>.container {
+        flex-wrap: nowrap;
+        gap: 0;
     }
 }
 
@@ -678,12 +726,13 @@ img {
     display: block;
 
     margin-left: 75px;
-
     margin-bottom: 16px;
 }
 
-@media only screen and (min-width: 1158px) {
-    .footer .container .logo {}
+@media only screen and (min-width: 768px) {
+    .footer .container .logo {
+        margin-left: 0;
+    }
 }
 
 .footer .container .footer-text {
@@ -694,9 +743,18 @@ img {
     margin: 0 auto 72px;
 }
 
+@media only screen and (min-width: 768px) {
+    .footer-logo {
+        margin-left: 0;
+        margin-right: 0;
+
+    }
+}
+
 @media only screen and (min-width: 1158px) {
     .footer-logo {
         margin-right: 120px;
+        margin-bottom: 0;
     }
 }
 
@@ -706,9 +764,16 @@ img {
     margin: 0 auto 72px;
 }
 
+@media only screen and (min-width: 768px) {
+    .footer-social {
+        margin-left: 0;
+    }
+}
+
 @media only screen and (min-width: 1158px) {
     .footer-social {
         margin-right: 80px;
+        margin-bottom: 0;
     }
 }
 
@@ -722,6 +787,13 @@ img {
     color: var(--main-bg-color);
     text-align: center;
 }
+
+@media only screen and (min-width: 768px) {
+    .social-media-text {
+        text-align: left;
+    }
+}
+
 
 .footer-social-list {
     display: flex;
@@ -765,11 +837,24 @@ img {
     width: 100%;
 }
 
+@media only screen and (min-width: 768px) {
+    .footer-subscribe {
+        align-items: flex-start;
+    }
+}
+
 .form-subscribe {
     display: flex;
     flex-direction: column;
-    margin-bottom: 96px;
+    margin-bottom: 0;
     gap: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+    .form-subscribe {
+        flex-direction: row;
+
+    }
 }
 
 .subscribe-text {
@@ -784,7 +869,7 @@ img {
 
 .subscribe-input {
     display: block;
-    width: 398px;
+    min-width: calc(100% - 30px);
     height: 40px;
     padding: 8px 16px;
 
@@ -793,6 +878,13 @@ img {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     color: var(--main-bg-color);
+}
+
+@media only screen and (min-width: 768px) {
+    .subscribe-input {
+        min-width: 0;
+        width: 264px;
+    }
 }
 
 .subscribe-input::placeholder {
