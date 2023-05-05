@@ -967,6 +967,7 @@ img {
     transition: opacity var(--duration-timing-func), visibility var(--duration-timing-func);
 }
 
+
 .backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
@@ -995,6 +996,12 @@ img {
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) rotate(360deg) scale(0.01);
     opacity: 0;
+}
+
+@media (orientation:landscape) {
+    .backdrop {
+        overflow: auto;
+    }
 }
 
 /* ------------------MODAL BUTTON------------------- */
