@@ -76,6 +76,8 @@ img {
 @media only screen and (min-width: 1158px) {
     .container {
         max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
@@ -151,7 +153,6 @@ img {
     }
 }
 
-
 .site-nav {
     display: flex;
     gap: 40px;
@@ -184,7 +185,7 @@ img {
     color: var(--pressed-state) !important;
 }
 
-.current::after {
+.site-nav .item .current::after {
     content: ' ';
     position: absolute;
     bottom: -1px;
@@ -235,7 +236,6 @@ img {
     color: var(--main-text-color);
 }
 
-
 @media only screen and (min-width: 1158px) {
     .contacts .link {
         display: block;
@@ -280,11 +280,64 @@ img {
     height: 600px;
     text-align: center;
 
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/hero/hero-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/hero/hero-mob@1x.jpg);
+}
+
+/* ------------MOBILE RETINA DISPLAY---------------- */
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero-image {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero/hero-mob@2x.jpg);
+    }
+}
+
+/* ---------------TABLET HERO IMAGE------------------ */
+@media only screen and (min-width: 481px) {
+    .hero-image {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero/hero-tab@1x.jpg);
+    }
+}
+
+/* --------------TABLET RETINA DISPLAY------------------- */
+@media only screen and (min-width: 481px) {
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero-image {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/hero/hero-tab@2x.jpg);
+        }
+    }
+}
+
+/* ---------------DESKTOP HERO IMAGE------------------ */
+@media only screen and (min-width: 769px) {
+    .hero-image {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero/hero-desc@1x.jpg);
+    }
+}
+
+/* --------------DESKTOP RETINA DISPLAY------------------- */
+@media only screen and (min-width: 769px) {
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero-image {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/hero/hero-desc@2x.jpg);
+        }
+    }
 }
 
 .main-title {
@@ -967,7 +1020,6 @@ img {
     transition: opacity var(--duration-timing-func), visibility var(--duration-timing-func);
 }
 
-
 .backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
@@ -998,7 +1050,7 @@ img {
     opacity: 0;
 }
 
-@media (orientation:landscape) {
+@media (orientation: landscape) {
     .backdrop {
         overflow: auto;
     }
@@ -1221,21 +1273,49 @@ img {
 /* ---------LIST OF BUTTONS------------------- */
 
 .section-p {
-    padding-top: 96px;
-    padding-bottom: 120px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+@media only screen and (min-width: 768px) {
+    .section-p {
+        padding-top: 64px;
+        padding-bottom: 96px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .section-p {
+        padding-top: 100px;
+        padding-bottom: 120px;
+    }
 }
 
 .filter-list {
     display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-bottom: 72px;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 16px;
+    margin-bottom: 48px;
+}
+
+@media only screen and (min-width: 768px) {
+    .filter-list {
+        justify-content: center;
+        margin-bottom: 64px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .filter-list {
+        margin-bottom: 72px;
+    }
 }
 
 /* --------------BUTTONS------------------- */
 
 .filter-button {
-    padding: 12px 24px;
+    padding: 8px 16px;
 
     border: 1px solid var(--accent-color);
     border-radius: 4px;
@@ -1262,6 +1342,12 @@ img {
     cursor: pointer;
 }
 
+@media only screen and (min-width: 768px) {
+    .filter-button {
+        padding: 12px 24px;
+    }
+}
+
 /* --------------/BUTTONS------------------- */
 /* ---------------LIST OF EXAMPLES---------- */
 
@@ -1273,7 +1359,19 @@ img {
 }
 
 .item-examples {
-    max-width: calc((100%-2 * 24px) / 3);
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .item-examples {
+        width: calc((100% - 24px) / 2);
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .item-examples {
+        width: calc((100% - 2 * 24px) / 3);
+    }
 }
 
 .examples-link {
@@ -1329,7 +1427,7 @@ img {
     padding-left: 16px;
     border: 1px solid var(--accent-color);
     border-top: none;
-    width: 360px;
+    /* width: 360px; */
 
     transition: border-color var(--duration-timing-func);
 }
@@ -1382,7 +1480,7 @@ img {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* ------------------MODAL BUTTON------------------- */
+/* ------------------CLOSE BUTTON------------------- */
 .mobile-close {
     position: absolute;
     top: 24px;
@@ -1396,16 +1494,10 @@ img {
 
     width: 24px;
     height: 24px;
-
-    background-color: var(--accent-color);
-    opacity: 0.1;
-    border: 1px solid var(--hero-background);
+    border: 1px solid transparent;
     border-radius: 50%;
-    cursor: pointer;
-}
 
-.mobile-close-icon {
-    fill: var(--hero-background);
+    cursor: pointer;
 }
 
 .menu-container {
@@ -1417,8 +1509,7 @@ img {
 
     display: flex;
     flex-direction: column;
-
-
+    justify-content: space-between;
 
     padding-top: 80px;
     padding-left: 40px;
@@ -1442,9 +1533,16 @@ img {
     margin-bottom: 0;
 }
 
+.mobile-contacts {
+    margin-bottom: 48px;
+}
 
 .mobile-contacts>.item {
     margin-bottom: 40px;
+}
+
+.mobile-contacts>.item:last-child {
+    margin-bottom: 0;
 }
 
 .mobile-contacts .item .section-title {
