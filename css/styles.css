@@ -44,6 +44,8 @@ p {
 
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /*---------------------- INDEX.HTML--------------------- */
@@ -63,8 +65,8 @@ img {
     margin-left: auto;
     margin-right: auto;
 
-    outline: 2px solid red;
-    outline-offset: -2px;
+    /* outline: 2px solid red;
+    outline-offset: -2px; */
 }
 
 @media only screen and (min-width: 768px) {
@@ -533,6 +535,12 @@ img {
     padding-top: 0px;
 }
 
+@media only screen and (min-width: 1158px) {
+    .section:nth-child(3) {
+        display: contents;
+    }
+}
+
 .skils-item {
     display: flex;
     gap: 24px;
@@ -543,11 +551,6 @@ img {
     width: calc((100%-48px) / 3);
 }
 
-@media only screen and (min-width: 1158px) {
-    .section:nth-child(3) {
-        display: contents;
-    }
-}
 
 /* -----------------/SKILS----------------------- */
 /* -----------------SECTION TEAM----------------------- */
@@ -1054,6 +1057,10 @@ img {
     .backdrop {
         overflow: auto;
     }
+
+    .modal {
+        top: 65%;
+    }
 }
 
 /* ------------------MODAL BUTTON------------------- */
@@ -1547,4 +1554,42 @@ img {
 
 .mobile-contacts .item .section-title {
     color: var(--primary-brand);
+}
+
+/* ------------MOBILE MENU SOCIAL LINL---------- */
+.mobile-social-list {
+    display: flex;
+    gap: 56px;
+}
+
+@media only screen and (max-width: 390px) {
+    .mobile-social-list {
+        gap: 28px;
+    }
+}
+
+.mobile-social-item {
+    width: 40px;
+    height: 40px;
+}
+
+.mobile-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+    background-color: var(--primary-brand);
+    transition: background-color var(--duration-timing-func);
+}
+
+.mobile-social-link:hover,
+.mobile-social-link:focus {
+    background-color: var(--success-color);
+}
+
+.mobile-social-icon {
+    fill: var(--light-mode);
 }
