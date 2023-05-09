@@ -537,7 +537,7 @@ img {
 
 @media only screen and (min-width: 1158px) {
     .section:nth-child(3) {
-        display: contents;
+        display: block;
     }
 }
 
