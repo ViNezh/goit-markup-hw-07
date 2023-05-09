@@ -277,9 +277,9 @@ img {
 .hero-image {
     margin-left: auto;
     margin-right: auto;
-    padding: 188px 0px;
+    padding: 112px 0px;
     max-width: 1440px;
-    height: 600px;
+    height: auto;
     text-align: center;
 
     background-repeat: no-repeat;
@@ -288,6 +288,12 @@ img {
 
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/hero/hero-mob@1x.jpg);
+}
+
+@media only screen and (min-width: 1158px) {
+    .hero-image {
+        padding: 188px 0px;
+    }
 }
 
 /* ------------MOBILE RETINA DISPLAY---------------- */
@@ -561,8 +567,7 @@ img {
 
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
     .team>.container {
-        padding-right: 108px;
-        padding-left: 108px;
+        width: 582px;
     }
 }
 
@@ -654,8 +659,7 @@ img {
 /* ---------------------------CUSTOMERS---------------- */
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
     .customers>.container {
-        padding-right: 108px;
-        padding-left: 108px;
+        width: 582px;
     }
 }
 
@@ -725,6 +729,12 @@ img {
     transition: color var(--duration-timing-func), border-color var(--duration-timing-func);
 }
 
+@media only screen and (max-width: 390px) {
+    .customers-link {
+        padding: 8px 16px;
+    }
+}
+
 .customers-link:hover,
 .customers-link:focus {
     border-color: var(--pressed-state);
@@ -772,8 +782,7 @@ img {
 
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
     .footer>.container {
-        padding-right: 108px;
-        padding-left: 108px;
+        width: 582px;
     }
 }
 
@@ -1037,7 +1046,7 @@ img {
     transform: translate(-50%, -50%) rotate(0) scale(1);
     opacity: 1;
 
-    width: 408px;
+    width: 392px;
     min-height: 584px;
 
     background-color: var(--modal-bgc);
@@ -1046,6 +1055,12 @@ img {
     border-radius: 4px;
 
     transition: transform var(--duration-timing-func) 250ms, opacity var(--duration-timing-func) 250ms;
+}
+
+@media only screen and (max-width: 400px) {
+    .modal {
+        width: calc(100% - 30px);
+    }
 }
 
 .backdrop.is-hidden .modal {
@@ -1554,6 +1569,12 @@ img {
 
 .mobile-contacts .item .section-title {
     color: var(--primary-brand);
+}
+
+@media only screen and (max-width: 390px) {
+    .mobile-contacts .item .section-title {
+        font-size: 28px;
+    }
 }
 
 /* ------------MOBILE MENU SOCIAL LINL---------- */
